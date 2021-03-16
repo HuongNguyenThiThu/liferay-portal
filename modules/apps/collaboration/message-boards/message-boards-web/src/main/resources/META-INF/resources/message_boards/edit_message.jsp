@@ -49,7 +49,7 @@ if (threadId > 0) {
 			}
 		}
 
-		parentAuthor = curParentMessage.isAnonymous() ? LanguageUtil.get(request, "anonymous") : HtmlUtil.escape(PortalUtil.getUserName(curParentMessage));
+		parentAuthor = curParentMessage.isAnonymous() ? LanguageUtil.get(request, "anonymous") : PortalUtil.getUserName(curParentMessage);
 	}
 	catch (Exception e) {
 	}

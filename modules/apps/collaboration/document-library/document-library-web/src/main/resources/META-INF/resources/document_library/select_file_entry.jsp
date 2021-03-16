@@ -102,7 +102,7 @@ dlSearchContainer.setResults(foldersAndFileEntriesAndFileShortcuts);
 							%>
 
 							<aui:a cssClass="selector-button" data="<%= data %>" href="javascript:;">
-								<%= HtmlUtil.escape(fileEntry.getTitle()) %>
+								<%= fileEntry.getTitle() %>
 							</aui:a>
 
 							<c:if test="<%= Validator.isNotNull(fileEntry.getDescription()) %>">

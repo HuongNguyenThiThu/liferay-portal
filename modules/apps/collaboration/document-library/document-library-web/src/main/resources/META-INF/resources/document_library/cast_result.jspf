@@ -39,8 +39,6 @@ if (result instanceof AssetEntry) {
 }
 else if (result instanceof FileEntry) {
 	fileEntry = (FileEntry)result;
-
-	fileEntry = fileEntry.toEscapedModel();
 }
 else if (result instanceof FileShortcut) {
 	fileShortcut = (FileShortcut)result;
