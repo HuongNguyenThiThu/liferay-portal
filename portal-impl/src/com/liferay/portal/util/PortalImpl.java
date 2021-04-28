@@ -4986,12 +4986,22 @@ public class PortalImpl implements Portal {
 			Map<String, String[]> params)
 		throws PortalException {
 
+		String portalUrl = getPortalURL(
+				company.getVirtualHostname(), getPortalServerPort(false),
+				false);
+
+		return getSiteAdminURL(portalUrl, group, ppid, params);
+	}
+
+	@Override
+	public String getSiteAdminURL(
+			String portalURL, Group group, String ppid,
+			Map<String, String[]> params)
+		throws PortalException {
+
 		StringBundler sb = new StringBundler(7);
 
-		sb.append(
-			getPortalURL(
-				company.getVirtualHostname(), getPortalServerPort(false),
-				false));
+		sb.append(portalURL);
 
 		sb.append(getPathFriendlyURLPrivateGroup());
 
